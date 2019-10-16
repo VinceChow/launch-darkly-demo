@@ -1,8 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import * as config from 'config';
 import * as LaunchDarkly from 'launchdarkly-node-server-sdk';
 
-const client = LaunchDarkly.init('sdk-39f8771c-dc13-4fb2-b6b1-a9da0108a223');
+const client = LaunchDarkly.init(config.get('LaunchDarkly.key'));
 
 const user = {
   firstName: 'Vincent',
