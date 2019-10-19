@@ -51,7 +51,7 @@ async function bootstrap() {
       console.log(
         await client.variation(
           'new-feature-demo',
-          { key: 'test.await' },
+          { key: 'api-test', anonymous: true },
           false,
         ),
       ),

@@ -6,12 +6,8 @@ import * as LaunchDarkly from 'launchdarkly-node-server-sdk';
 export class LaunchDarklyService {
   private readonly ldClient: LaunchDarkly.LDClient;
   private readonly user = {
-    firstName: 'Vincent',
-    lastName: 'Chow',
-    key: 'vincent.chow.demo.key',
-    custom: {
-      groups: 'beta_testers',
-    },
+    key: 'api-test',
+    anonymous: true,
   };
 
   constructor() {
